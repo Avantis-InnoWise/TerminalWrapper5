@@ -9,7 +9,9 @@ class TerminalCommand {
     func startTransformation(usingKey key: String) -> String {
         let original = [UInt8](key.utf8) // Original text in utf8.
         /* Сreate string from array of numbers with separator */
-        return finalArrayForState(from: original, key: key, state: .start)
+        return finalArrayForState(from: original,
+                                  key: key,
+                                  state: .start)
             .map { String($0) }
             .joined(separator: Dimensions.separator)
     }
@@ -17,9 +19,12 @@ class TerminalCommand {
     func endTransformation(usingKey key: String) -> String {
         let original = [UInt8](Dimensions.salt.utf8) // Salt in utf8.
         /* Сreate string from array */
-        let finalArray = finalArrayForState(from: original, key: key, state: .end)
+        let finalArray = finalArrayForState(from: original,
+                                            key: key,
+                                            state: .end)
         guard let exitString = String(bytes: finalArray,
-                                      encoding: .utf8) else { return "" }
+                                      encoding: .utf8)
+        else { return "" }
         return exitString
     }
     
