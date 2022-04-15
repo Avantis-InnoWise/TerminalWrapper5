@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		304BA50228080F9A00CBA512 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304BA50128080F9A00CBA512 /* main.swift */; };
-		30D1C25B28082387004B78F6 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1C25A28082387004B78F6 /* Manager.swift */; };
-		30D1C25F2808405F004B78F6 /* Choose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1C25E2808405F004B78F6 /* Choose.swift */; };
-		30D1C2612808417A004B78F6 /* TerminalCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1C2602808417A004B78F6 /* TerminalCommand.swift */; };
-		30E65E012808514700EF754F /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E65E002808514700EF754F /* Dimensions.swift */; };
-		30E65E0428086A6400EF754F /* TransformationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E65E0328086A6400EF754F /* TransformationState.swift */; };
+		3037A4AE28094A1700ACD27C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E65E0B2808B4F000EF754F /* main.swift */; };
+		3037A4AF28094A1900ACD27C /* runMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E65E0C2808B4F000EF754F /* runMain.swift */; };
+		3037A4B028094A1C00ACD27C /* Choose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E65E0A2808B4F000EF754F /* Choose.swift */; };
+		3037A4B128094A2300ACD27C /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E65E0E2808B4FD00EF754F /* Manager.swift */; };
+		3037A4B228094A2600ACD27C /* TerminalCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E65E0F2808B4FD00EF754F /* TerminalCommand.swift */; };
+		3037A4B328094A2800ACD27C /* TransformationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E65E102808B4FD00EF754F /* TransformationState.swift */; };
+		3037A4B428094A2A00ACD27C /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E65E002808514700EF754F /* Dimensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,12 +30,13 @@
 
 /* Begin PBXFileReference section */
 		304BA4FE28080F9A00CBA512 /* TerminalWrapper5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TerminalWrapper5; sourceTree = BUILT_PRODUCTS_DIR; };
-		304BA50128080F9A00CBA512 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		30D1C25A28082387004B78F6 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
-		30D1C25E2808405F004B78F6 /* Choose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choose.swift; sourceTree = "<group>"; };
-		30D1C2602808417A004B78F6 /* TerminalCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalCommand.swift; sourceTree = "<group>"; };
 		30E65E002808514700EF754F /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
-		30E65E0328086A6400EF754F /* TransformationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationState.swift; sourceTree = "<group>"; };
+		30E65E0A2808B4F000EF754F /* Choose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choose.swift; sourceTree = "<group>"; };
+		30E65E0B2808B4F000EF754F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		30E65E0C2808B4F000EF754F /* runMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runMain.swift; sourceTree = "<group>"; };
+		30E65E0E2808B4FD00EF754F /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		30E65E0F2808B4FD00EF754F /* TerminalCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalCommand.swift; sourceTree = "<group>"; };
+		30E65E102808B4FD00EF754F /* TransformationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,21 +69,11 @@
 		304BA50028080F9A00CBA512 /* TerminalWrapper5 */ = {
 			isa = PBXGroup;
 			children = (
-				30E65E0628086B7B00EF754F /* Main */,
+				30E65E092808B4F000EF754F /* Main */,
+				30E65E0D2808B4FD00EF754F /* Execute */,
 				30E65E0528086B6000EF754F /* SubsidiaryClass */,
-				30E65E0228086A2500EF754F /* Execute */,
 			);
 			path = TerminalWrapper5;
-			sourceTree = "<group>";
-		};
-		30E65E0228086A2500EF754F /* Execute */ = {
-			isa = PBXGroup;
-			children = (
-				30D1C25A28082387004B78F6 /* Manager.swift */,
-				30D1C2602808417A004B78F6 /* TerminalCommand.swift */,
-				30E65E0328086A6400EF754F /* TransformationState.swift */,
-			);
-			name = Execute;
 			sourceTree = "<group>";
 		};
 		30E65E0528086B6000EF754F /* SubsidiaryClass */ = {
@@ -92,13 +84,24 @@
 			path = SubsidiaryClass;
 			sourceTree = "<group>";
 		};
-		30E65E0628086B7B00EF754F /* Main */ = {
+		30E65E092808B4F000EF754F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				304BA50128080F9A00CBA512 /* main.swift */,
-				30D1C25E2808405F004B78F6 /* Choose.swift */,
+				30E65E0B2808B4F000EF754F /* main.swift */,
+				30E65E0C2808B4F000EF754F /* runMain.swift */,
+				30E65E0A2808B4F000EF754F /* Choose.swift */,
 			);
-			name = Main;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		30E65E0D2808B4FD00EF754F /* Execute */ = {
+			isa = PBXGroup;
+			children = (
+				30E65E0E2808B4FD00EF754F /* Manager.swift */,
+				30E65E0F2808B4FD00EF754F /* TerminalCommand.swift */,
+				30E65E102808B4FD00EF754F /* TransformationState.swift */,
+			);
+			path = Execute;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,12 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30E65E0428086A6400EF754F /* TransformationState.swift in Sources */,
-				30E65E012808514700EF754F /* Dimensions.swift in Sources */,
-				30D1C25F2808405F004B78F6 /* Choose.swift in Sources */,
-				30D1C25B28082387004B78F6 /* Manager.swift in Sources */,
-				304BA50228080F9A00CBA512 /* main.swift in Sources */,
-				30D1C2612808417A004B78F6 /* TerminalCommand.swift in Sources */,
+				3037A4AE28094A1700ACD27C /* main.swift in Sources */,
+				3037A4AF28094A1900ACD27C /* runMain.swift in Sources */,
+				3037A4B028094A1C00ACD27C /* Choose.swift in Sources */,
+				3037A4B128094A2300ACD27C /* Manager.swift in Sources */,
+				3037A4B228094A2600ACD27C /* TerminalCommand.swift in Sources */,
+				3037A4B328094A2800ACD27C /* TransformationState.swift in Sources */,
+				3037A4B428094A2A00ACD27C /* Dimensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

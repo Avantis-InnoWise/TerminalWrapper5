@@ -23,7 +23,10 @@ class TerminalCommand {
         return exitString
     }
     
-    func finalArrayForState(from original: [UInt8], key: String, state: TransformationState) -> [UInt8] {
+    func finalArrayForState(from original: [UInt8],
+                            key: String,
+                            state: TransformationState) -> [UInt8]
+    {
         let startText = [UInt8](Dimensions.salt.utf8) // original text in utf8
         var finalArray = [UInt8]() // salt in utf8
         
@@ -32,7 +35,10 @@ class TerminalCommand {
         case .start:
             original.enumerated().forEach { key in
                 /* Сombine salt and the original string. */
-                finalArray.append(key.element ^ startText[key.offset % startText.count])
+                let item = mapKey(keyElement: key.element,
+                                  keyOffset: key.offset,
+                                  startText: startText)
+                finalArray.append(item)
             }
         case .end:
             key.components(separatedBy: Dimensions.separator)
@@ -40,10 +46,20 @@ class TerminalCommand {
                 .enumerated()
                 .forEach { key in
                     /* Сombine salt and the original string. */
-                    finalArray.append(key.element ^ startText[key.offset % startText.count])
+                    let item = mapKey(keyElement: key.element,
+                                      keyOffset: key.offset,
+                                      startText: startText)
+                    finalArray.append(item)
                 }
         }
         
         return finalArray
+    }
+    
+    private func mapKey(keyElement: UInt8,
+                        keyOffset: Int,
+                        startText: [UInt8]) -> UInt8
+    {
+        return keyElement ^ startText[keyOffset % startText.count]
     }
 }
