@@ -1,9 +1,9 @@
 import Foundation
 
 /* Arrange properties. */
-let termCommnd = TerminalCommand()
-let manager = Manager()
+let termMtd = TermMtd()
+let obsMng = Observer()
 
 /* Run program. */
-let ext = RunMain()
+let ext = Closure()
 ext.run()

@@ -1,7 +1,7 @@
 import Foundation
 
 /* Enumeration to choose encryption/decryption */
-enum TransformationState {
+enum TrfState {
     case start // encryption
     case end   // decryption
 }

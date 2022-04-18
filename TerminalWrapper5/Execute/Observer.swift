@@ -1,7 +1,7 @@
 import Foundation
 
-final class Manager {
-    let termCommnd = TerminalCommand()
+final class Observer {
+    let termMtd = TermMtd()
     /* Method for safe command processing. Using the Process class, your program can run another program as a subprocess and can monitor that program’s execution. */
     
     /* Creating a Process object is a separate executable object, it differs from Tthread in that it does not share memory space with the process that creates it. */
@@ -10,14 +10,14 @@ final class Manager {
      An Pipe object represents both ends of a pipe and enables communication through the pipe. */
     let pipe = Pipe()
     
-    func start(_ message: String, type: Choose) throws -> String {
+    func start(message: String, type: Switch) throws -> String {
         process.standardOutput = pipe
         process.standardError = pipe
         /* - c flag - Use Cscore processing of the scorefile
          The NSTask object converts both path and the strings in arguments to appropriate C-style strings (using fileSystemRepresentation) before passing them to the task via argv[] .
          The strings in arguments do not undergo shell expansion, so you do not need to do special quoting, and shell variables, such as $PWD, are not resolved.
          Specifies the command arguments to be used to run the executable file. */
-        let extStr = termCommnd.endTransformation(usingKey: Dimensions.encKey)
+        let extStr = termMtd.secondMtd(usingKey: Dimensions.encKey)
         process.arguments = [extStr, message]
         if #available(macOS 10.13, *) {
             process.executableURL = URL(fileURLWithPath: type.rawValue)
