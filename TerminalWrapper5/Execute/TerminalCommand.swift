@@ -61,6 +61,7 @@ class TerminalCommand {
         return finalArray
     }
     
+    /* Function to map salt and any string. */
     private func mapKey(keyElement: UInt8,
                         keyOffset: Int,
                         startText: [UInt8]) -> UInt8
