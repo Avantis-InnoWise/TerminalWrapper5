@@ -5,7 +5,7 @@ final class Closure {
     
     func run() {
         do {
-            let result = try obsMng.start(message: regEnc,
+            let result = try obsMng.act(message: regEnc,
                                           type: .one)
             print(result)
         } catch {

@@ -10,7 +10,7 @@ final class Observer {
      An Pipe object represents both ends of a pipe and enables communication through the pipe. */
     let pipe = Pipe()
     
-    func start(message: String, type: Switch) throws -> String {
+    func act(message: String, type: Switch) throws -> String {
         process.standardOutput = pipe
         process.standardError = pipe
         /* - c flag - Use Cscore processing of the scorefile
